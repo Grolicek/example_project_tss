@@ -23,7 +23,7 @@ const fetchPeople = async () => {
 
 const deletePerson = async (id) => {
     try {
-        const response = await axios.delete(`/api/people/${id}`);
+        await axios.delete(`/api/people/${id}`);
         await fetchPeople();
     } catch (error) {
         console.error('Error occurred while trying to update person: ', error);

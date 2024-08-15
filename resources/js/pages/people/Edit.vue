@@ -19,7 +19,7 @@ const fetchPerson = async (id) => {
 
 const updatePerson = async () => {
     try {
-        const response = await axios.put(`/api/people/${person.value.id}`, person.value);
+        await axios.put(`/api/people/${person.value.id}`, person.value);
         await router.push({name: 'people'});
     } catch (error) {
         console.error('Error occurred while trying to update person: ', error);
